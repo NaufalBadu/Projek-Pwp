@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Galang Dana{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h3>Buat Galang Dana</h3>
+
+    <a href="{{ url_for('kategori') }}" style="text-decoration:none">
+        <div class="create">Buat baru galang dana +</div>
+    </a>
+
+    <h3>Kelola Galang Dana</h3><br>
+
+    {% for c in campaigns %}
+        <div class="campaign">
+            <div class="campaign-img"></div>
+            <div class="campaign-title">{{ c }}</div>
+        </div>
+    {% else %}
+        <p>Belum ada galang dana.</p>
+    {% endfor %}
+</div>
+{% endblock %}
