@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(
+                135deg,
+                #fff2d9 0%,
+                #d6ecff 50%,
+                #ffffff 100%
+      )
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 900px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .left {
+      flex: 1;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .right {
+      flex: 1;
+      background: #ffffff;
+      padding: 40px 30px;
+    }
+
+    h3 {
+      margin-bottom: 30px;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px 15px;
+      border: none;
+      background: #e2e2e2;
+      border-radius: 25px;
+      margin-bottom: 15px;
+    }
+
+    .forgot {
+      font-size: 0.85em;
+      text-align: right;
+      margin-bottom: 15px;
+    }
+
+       button {
+  width: 100%;
+  padding: 14px;
+  background:#e2e2e2;
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+    .separator {
+      text-align: center;
+      margin: 20px 0 10px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .link {
+      display: block;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        padding: 30px 20px;
+      }
+
+      .logo {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="logo">
+        <img src="logo-cerah.jpeg" alt="Logo Indonesia Cerah">
+      </div>
+      <div class="brand">Indonesia Cerah</div>
+    </div>
+    <div class="right">
+      <h3>Masuk Akun IndonesiaCerah</h3>
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+
+        <div class="forgot">
+          <a href="#">Lupa kata sandi?</a>
+        </div>
+
+        <button type="submit">Masuk</button>
+
+        <div class="separator">Atau</div>
+
+        <div class="link">
+          Belum Punya Akun? <a href="register.html">Daftar</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
