@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar | Indonesia Cerah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <!-- LEFT -->
+        <div class="left">
+            <img src="{{ url_for('static', filename='img/logo-cerah.png') }}" alt="Indonesia Cerah">
+            <h2>Indonesia Cerah</h2>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right">
+            <h3>Daftar Akun Indonesia Cerah</h3>
+
+            <form method="post">
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Nama Lengkap" required>
+                <input type="password" placeholder="Kata Sandi" required>
+                <input type="password" placeholder="Konfirmasi Kata Sandi" required>
+
+                <div class="rules">
+                    ✓ Minimum 8 karakter<br>
+                    ✓ Sertakan huruf kapital & non-kapital<br>
+                    ✓ Sertakan angka & simbol
+                </div>
+
+                <div class="agree">
+                    <input type="checkbox" required>
+                    <label>
+                        Dengan mendaftar, kamu menyetujui
+                        <a href="#">Syarat & Ketentuan</a> dan
+                        <a href="#">Kebijakan Privasi</a>
+                        IndonesiaCerah.com
+                    </label>
+                </div>
+
+                <button type="submit">Daftar</button>
+            </form>
+
+            <p class="login-link">
+                Sudah Punya Akun?
+                <a href="{{ url_for('login') }}">Masuk</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
