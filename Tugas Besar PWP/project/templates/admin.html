@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Atur Donasi</title>
+
+    <!-- ADMIN CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="{{ url_for('static', filename='img/logo-cerah.png') }}" alt="Logo">
+            <span>Indonesia Cerah</span>
+        </div>
+
+        <div class="sidebar-menu active">
+            <img src="{{ url_for('static', filename='img/icon-edit.jpeg') }}" class="menu-icon">
+            <p>Atur Donasi</p>
+        </div>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+    <div class="main">
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="profile-icon">
+                <span>👤</span>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <div class="card">
+                <h3>Atur Donasi</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Judul</th>
+                                <th>Kategori</th>
+                                <th>Lokasi</th>
+                                <th>Deskripsi</th>
+                                <th>Nominal</th>
+                                <th>Waktu</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for c in campaigns %}
+                            <tr>
+                                <td>{{ c[0] }}</td>
+                                <td>{{ c[1] }}</td>
+                                <td>{{ c[2] }}</td>
+                                <td>{{ c[3] }}</td>
+                                <td>{{ c[4] }}</td>
+                                <td>Rp {{ "{:,}".format(c[5]) }}</td>
+                                <td>{{ c[6] }}</td>
+                                <td>
+                                    <form action="/admin/verifikasi/{{ c[0] }}" method="post" style="display:flex; gap:6px;">
+                                        <button type="submit" name="status" value="ditolak" class="btn-tolak">
+                                            Tolak
+                                        </button>
+                                        <button type="submit" name="status" value="disetujui" class="btn-terima">
+                                            Terima
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="8" style="text-align:center;">
+                                    Tidak ada data
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+</body>
+</html>
