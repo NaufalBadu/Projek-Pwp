@@ -1,0 +1,154 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #f4f4f4;
+}
+
+/* ================= LAYOUT ================= */
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 240px;
+    background: #978f8f;
+    padding: 20px;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+
+.sidebar-logo img {
+    width: 55px;
+}
+
+
+.sidebar-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #978f8f;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sidebar-menu.active {
+    background: #978f8f;
+}
+
+/* ================= MAIN ================= */
+.main {
+    flex: 1;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    height: 60px;
+    background: #cfc6c6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.profile-icon {
+    width: 36px;
+    height: 36px;
+    background: #eee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ================= CONTENT ================= */
+.content {
+    padding: 20px;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: #e0e0e0;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+/* ================= TABLE ================= */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+thead {
+    background: #d9d9d9;
+}
+
+th, td {
+    border: 1px solid #777;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* ================= BUTTON ================= */
+.btn-tolak {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-terima {
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-tolak:hover {
+    background: #c0392b;
+}
+
+.btn-terima:hover {
+    background: #27ae60;
+}
+
+/* ICON MENU SIDEBAR */
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
